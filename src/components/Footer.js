@@ -13,8 +13,7 @@ export default function Footer() {
       <div className={styles.footerCard}>
         <div className={inter.className}>
           <Card className={styles.footer}>
-            <h6>Created by Scotty Krieg Copyright 2023</h6>
-            <h6>Created Using:</h6>
+            <h6>Created by Scotty Krieg, Using:</h6>
             <div className="styles.footer-grid">
               <SiMui size={30} />
               <SiTypescript size={30} />
