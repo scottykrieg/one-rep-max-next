@@ -16,11 +16,11 @@ export default function Footer() {
             <h6>Created by Scotty Krieg Copyright 2023</h6>
             <h6>Created Using:</h6>
             <div className="styles.footer-grid">
-              <SiMui />
-              <SiTypescript />
-              <FaReact />
-              <SiNextdotjs />
-              <SiFirebase />
+              <SiMui size={30} />
+              <SiTypescript size={30} />
+              <FaReact size={30} />
+              <SiNextdotjs size={30} />
+              <SiFirebase size={30} />
             </div>
           </Card>
         </div>
