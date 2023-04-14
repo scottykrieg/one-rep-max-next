@@ -11,6 +11,7 @@ export default function Brzycki() {
     weight: 100,
   });
   const [brzyckiReps, setBrzyckiReps] = useState<{ reps: number }>({ reps: 2 });
+  const [showMath, setShowMath] = useState(false);
 
   function handleWeight(e: React.ChangeEvent<HTMLInputElement>) {
     setBrzyckiWeight({
@@ -53,6 +54,10 @@ export default function Brzycki() {
       ...brzyckiReps,
       reps: brzyckiReps.reps - 1,
     });
+  }
+
+  function toggleMath() {
+    setShowMath(!showMath);
   }
 
   return (
@@ -103,13 +108,19 @@ export default function Brzycki() {
           brzyckiWeight.weight / (1.0278 - 0.0278 * brzyckiReps.reps)
         )}{" "}
       </h1>
-      <h2>
-        {brzyckiWeight.weight} ÷ [(1.0278) - (0.0278 x {brzyckiReps.reps})]
-      </h2>
+      <Button className="toggle-math-button" onClick={toggleMath}>
+        {showMath ? "Hide Math" : "Show Math"}
+      </Button>{" "}
+      {showMath && (
+        <div className="math">
+          <h2>
+            {brzyckiWeight.weight} ÷ [(1.0278) - (0.0278 x {brzyckiReps.reps})]
+          </h2>
+        </div>
+      )}
       <Link href="/">
         <Button className="back-to-top">Back to top.</Button>
       </Link>
-
       {/* <TextPreview
         previewText="This is a preview of the text."
         fullText="This is the full text that will be displayed when the 'read more' button is clicked."
@@ -117,5 +128,3 @@ export default function Brzycki() {
     </>
   );
 }
-
-//Fix increment buttons: stop re-rendering!!!!!!

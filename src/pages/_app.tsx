@@ -5,24 +5,24 @@ import Layout from "@/components/layout";
 import { Inter } from "next/font/google";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import lightTheme from "../styles/lightTheme";
-import darkTheme from "../styles/darkTheme";
+import lightTheme from "@/styles/lightTheme";
+import darkTheme from "@/styles/darkTheme";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
 
 const selectedThemeLight = createTheme({
   ...lightTheme,
-  typography: {
-    fontFamily: inter.fontFamily,
-  },
+  // typography: {
+  //   fontFamily: inter.fontFamily,
+  // },
 });
 
 const selectedThemeDark = createTheme({
   ...darkTheme,
-  typography: {
-    fontFamily: inter.fontFamily,
-  },
+  // typography: {
+  //   fontFamily: inter.fontFamily,
+  // },
 });
 
 export default function App({ Component, pageProps }: AppProps) {

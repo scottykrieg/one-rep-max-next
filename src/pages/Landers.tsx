@@ -19,6 +19,7 @@ export default function Landers(): JSX.Element {
     weight: 100,
   });
   const [landersReps, setLandersReps] = useState<LanderRepsState>({ reps: 2 });
+  const [showMath, setShowMath] = useState(false);
 
   function handleWeight(e: ChangeEvent<HTMLInputElement>): void {
     setLandersWeight({
@@ -64,6 +65,10 @@ export default function Landers(): JSX.Element {
       ...landersReps,
       reps: landersReps.reps - 1,
     });
+  }
+
+  function toggleMath() {
+    setShowMath(!showMath);
   }
 
   return (
@@ -113,11 +118,19 @@ export default function Landers(): JSX.Element {
         {Math.round(
           (100 * landersWeight.weight) / (101.3 - 2.67123 * landersReps.reps)
         )}{" "}
-      </h1>
-      <h2>
-        100 x {landersWeight.weight} ÷ (101.3 - (2.67123 x {landersReps.reps}
-        ))
-      </h2>
+      </h1>{" "}
+      <Button className="toggle-math-button" onClick={toggleMath}>
+        {showMath ? "Hide Math" : "Show Math"}
+      </Button>{" "}
+      {showMath && (
+        <div className="math">
+          <h2>
+            100 x {landersWeight.weight} ÷ (101.3 - (2.67123 x{" "}
+            {landersReps.reps}
+            ))
+          </h2>{" "}
+        </div>
+      )}
       <Link href="/">
         <Button className="back-to-top">Back to top.</Button>
       </Link>

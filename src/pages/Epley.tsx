@@ -11,6 +11,7 @@ export default function Epley(): JSX.Element {
     weight: 100,
   });
   const [epleyReps, setEpleyReps] = useState<{ reps: number }>({ reps: 2 });
+  const [showMath, setShowMath] = useState(false);
 
   function handleWeight(e: ChangeEvent<HTMLInputElement>): void {
     setEpleyWeight({
@@ -55,6 +56,10 @@ export default function Epley(): JSX.Element {
     });
   }
 
+  function toggleMath() {
+    setShowMath(!showMath);
+  }
+
   return (
     <>
       <h1>Epley Formula</h1>
@@ -96,16 +101,23 @@ export default function Epley(): JSX.Element {
         </IconButton>
         <br />
       </form>
-
       <h1>
         1RM ={" "}
         {Math.round(epleyReps.reps * epleyWeight.weight * 0.033) +
           epleyWeight.weight}{" "}
       </h1>
-      <h2>
-        {" "}
-        (0.033 x {epleyReps.reps} x {epleyWeight.weight}) + {epleyWeight.weight}
-      </h2>
+      <Button className="toggle-math-button" onClick={toggleMath}>
+        {showMath ? "Hide Math" : "Show Math"}
+      </Button>{" "}
+      {showMath && (
+        <div className="math">
+          <h2>
+            {" "}
+            (0.033 x {epleyReps.reps} x {epleyWeight.weight}) +{" "}
+            {epleyWeight.weight}
+          </h2>{" "}
+        </div>
+      )}
       <Link href="/">
         <Button className="back-to-top">Back to top.</Button>
       </Link>
