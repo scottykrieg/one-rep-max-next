@@ -1,17 +1,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Brzycki from "./Brzycki";
-import Epley from "./Epley";
-import Landers from "./Landers";
 import { Card } from "@mui/material";
 import { GiWeightLiftingUp } from "react-icons/gi";
-
-// Import the functions you need from the SDKs you need
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import CalcBox from "@/components/CalcBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +13,7 @@ export default function Home() {
         <title>1RM Calculator</title>
       </Head>
       <main>
+        <CalcBox />
         <Card className="text-card">
           <p>
             Using 3 popular formulas: Brzycki, Landers, and Epley you can find
@@ -66,21 +58,6 @@ export default function Home() {
           <p>
             Click one of the links above or scroll below to test this yourself!
           </p>
-        </Card>
-        <Card className="calculator-card">
-          <div id="brzycki">
-            <Brzycki />
-          </div>
-        </Card>
-        <Card className="calculator-card">
-          <div id="epley">
-            <Epley />
-          </div>
-        </Card>
-        <Card className="calculator-card">
-          <div id="landers">
-            <Landers />
-          </div>
         </Card>
       </main>
     </>

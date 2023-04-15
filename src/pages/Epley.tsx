@@ -171,13 +171,6 @@ export default function Epley(): JSX.Element {
           </h2>{" "}
         </div>
       )}
-      <Link href="/">
-        <Button className="back-to-top">Back to top.</Button>
-      </Link>
-      {/* <TextPreview
-        previewText="This is a preview of the text."
-        fullText="This is the full text that will be displayed when the 'read more' button is clicked."
-      /> */}
     </>
   );
 }

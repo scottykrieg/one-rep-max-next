@@ -173,9 +173,6 @@ export default function Brzycki() {
           </h2>
         </div>
       )}
-      <Link href="/">
-        <Button className="back-to-top">Back to top.</Button>
-      </Link>
     </>
   );
 }

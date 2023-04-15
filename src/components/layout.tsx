@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import TitleText from "./TitleText";
 
@@ -9,7 +8,6 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Navbar />
       <TitleText />
       <main>{children}</main>
       <Footer />
