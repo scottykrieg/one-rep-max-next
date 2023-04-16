@@ -6,6 +6,7 @@ import IconButton from "@mui/material/Icon";
 import RemoveCircle from "@mui/icons-material/Remove";
 import { styled } from "@mui/material/styles";
 import Switch, { SwitchProps } from "@mui/material/Switch";
+import Card from "@mui/material";
 
 export default function Epley(): JSX.Element {
   const [epleyWeight, setEpleyWeight] = useState<{ weight: number }>({
@@ -151,7 +152,13 @@ export default function Epley(): JSX.Element {
         {Math.round(epleyReps.reps * epleyWeight.weight * 0.033) +
           epleyWeight.weight}{" "}
       </h1>
-      <div style={{ display: "grid", placeItems: "center" }}>
+      <div
+        style={{
+          display: "grid",
+          placeItems: "center",
+          backgroundColor: "silver",
+        }}
+      >
         <Button className="toggle-math-button" onClick={toggleMath}>
           {showMath ? "Hide Math" : "Show Math"}
         </Button>{" "}
@@ -159,9 +166,9 @@ export default function Epley(): JSX.Element {
           checked={showMath}
           onClick={toggleMath}
           inputProps={{ "aria-label": "ant design" }}
+          className="math-switch"
         />
       </div>
-
       {showMath && (
         <div className="math">
           <h2>

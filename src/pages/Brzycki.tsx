@@ -164,6 +164,7 @@ export default function Brzycki() {
           checked={showMath}
           onClick={toggleMath}
           inputProps={{ "aria-label": "ant design" }}
+          className="math-switch"
         />
       </div>
       {showMath && (

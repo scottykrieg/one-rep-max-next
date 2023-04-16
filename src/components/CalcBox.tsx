@@ -48,7 +48,15 @@ export default function CalcBox() {
   };
   return (
     <>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          background: "none",
+          zIndex: "99",
+          position: "relative",
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}

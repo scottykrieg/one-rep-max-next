@@ -170,6 +170,7 @@ export default function Landers(): JSX.Element {
           {showMath ? "Hide Math" : "Show Math"}
         </Button>{" "}
         <AntSwitch
+          className="math-switch"
           checked={showMath}
           onClick={toggleMath}
           inputProps={{ "aria-label": "ant design" }}
