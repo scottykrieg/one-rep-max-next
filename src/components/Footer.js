@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import styles from "@/styles/footer.module.sass";
 import { FaReact } from "react-icons/fa";
 import { SiFirebase, SiNextdotjs, SiMui, SiTypescript } from "react-icons/si";

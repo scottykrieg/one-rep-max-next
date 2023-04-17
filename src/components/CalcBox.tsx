@@ -2,7 +2,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import * as React from "react";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import Brzycki from "@/pages/Brzycki";
 import Epley from "@/pages/Epley";
 import Landers from "@/pages/Landers";
@@ -26,7 +26,12 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <div>
+            {" "}
+            {/* <Typography> */}
+            {children}
+            {/* </Typography> */}
+          </div>
         </Box>
       )}
     </div>
