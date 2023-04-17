@@ -151,7 +151,7 @@ export default function Brzycki() {
         </IconButton>
       </form>
       <h1>
-        1RM =
+        1RM ={" "}
         {Math.round(
           brzyckiWeight.weight / (1.0278 - 0.0278 * brzyckiReps.reps)
         )}{" "}

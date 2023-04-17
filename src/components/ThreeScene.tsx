@@ -58,7 +58,7 @@ export default function ThreeScene() {
       scene.add(star);
     }
 
-    Array(250).fill(1).forEach(addStar);
+    Array(275).fill(1).forEach(addStar);
 
     // Define an animation loop using requestAnimationFrame
 

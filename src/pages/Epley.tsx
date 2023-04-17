@@ -156,7 +156,6 @@ export default function Epley(): JSX.Element {
         style={{
           display: "grid",
           placeItems: "center",
-          backgroundColor: "silver",
         }}
       >
         <Button className="toggle-math-button" onClick={toggleMath}>

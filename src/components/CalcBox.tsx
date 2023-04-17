@@ -60,11 +60,47 @@ export default function CalcBox() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          centered
+          sx={{
+            "& .MuiTabs-flexContainer": {
+              justifyContent: "center",
+            },
+            "& .MuiTab-root": {
+              width: "auto",
+              margin: "0 10px",
+            },
+          }}
         >
-          <Tab label="Brzycki" {...a11yProps(0)} />
-          <Tab label="Epley" {...a11yProps(1)} />
-          <Tab label="Landers" {...a11yProps(2)} />
+          <Tab
+            className="tabLabel"
+            label="Brzycki"
+            {...a11yProps(0)}
+            sx={{
+              "&.Mui-selected": {
+                color: "silver",
+              },
+            }}
+          />
+          <Tab
+            className="tabLabel"
+            label="Epley"
+            {...a11yProps(1)}
+            sx={{
+              "&.Mui-selected": {
+                color: "silver",
+              },
+            }}
+          />
+          <Tab
+            className="tabLabel"
+            label="Landers"
+            {...a11yProps(2)}
+            sx={{
+              "&.Mui-selected": {
+                color: "silver",
+              },
+            }}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

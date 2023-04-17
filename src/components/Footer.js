@@ -12,12 +12,12 @@ export default function Footer() {
       <div className={styles.footerCard}>
         <div className={inter.className}>
           <h6>Created by Scotty Krieg, Using:</h6>
-          <div className="styles.footer-grid">
-            <SiMui size={30} />
-            <SiTypescript size={30} />
+          <div className={styles.footerGrid}>
             <FaReact size={30} />
+            <SiTypescript size={30} />
             <SiNextdotjs size={30} />
             <SiFirebase size={30} />
+            <SiMui size={30} />
           </div>
         </div>
       </div>
