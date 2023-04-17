@@ -108,10 +108,10 @@ export default function Epley(): JSX.Element {
   }));
   return (
     <>
-      <h1>Epley Formula</h1>
+      <h1>Epley Formula</h1>{" "}
       <form>
         <label>
-          Weight:
+          <h1>Weight:</h1>
           <input
             className="weight-input-text"
             placeholder="Enter weight used here."
@@ -119,17 +119,21 @@ export default function Epley(): JSX.Element {
             onChange={handleWeight}
             type="text"
             name="weight"
-          />
+          />{" "}
+          <br />
+          <IconButton className="add-weight-button" onClick={addWeight}>
+            <AddBoxIcon />
+          </IconButton>
+          <IconButton
+            className="subtract-weight-button"
+            onClick={subtractWeight}
+          >
+            <RemoveCircle />
+          </IconButton>
         </label>
 
-        <IconButton className="add-weight-button" onClick={addWeight}>
-          <AddBoxIcon />
-        </IconButton>
-        <IconButton className="subtract-weight-button" onClick={subtractWeight}>
-          <RemoveCircle />
-        </IconButton>
         <label>
-          Reps:
+          <h1>Reps:</h1>
           <input
             className="reps-input-text"
             placeholder="Enter repetitions performed here."
@@ -138,13 +142,15 @@ export default function Epley(): JSX.Element {
             type="text"
             name="reps"
           />
+          <br />
+          <IconButton className="add-reps-button" onClick={addReps}>
+            <AddBoxIcon />
+          </IconButton>
+          <IconButton className="subtract-reps-button" onClick={subtractReps}>
+            <RemoveCircle />
+          </IconButton>
         </label>
-        <IconButton className="add-reps-button" onClick={addReps}>
-          <AddBoxIcon />
-        </IconButton>
-        <IconButton className="subtract-reps-button" onClick={subtractReps}>
-          <RemoveCircle />
-        </IconButton>
+
         <br />
       </form>
       <h1>
