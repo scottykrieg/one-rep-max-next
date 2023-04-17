@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 import styles from "@/styles/Three.module.sass";
 import * as THREE from "three";
 
+interface Star extends THREE.Mesh {
+  velocityY: number;
+}
+
 export default function ThreeScene() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -45,7 +49,7 @@ export default function ThreeScene() {
     function addStar() {
       const geometry = new THREE.SphereGeometry(7, 24, 24);
       const material = new THREE.MeshToonMaterial({ color: 0x005588 });
-      const star = new THREE.Mesh(geometry, material);
+      const star = new THREE.Mesh(geometry, material) as unknown as Star;
       const [x, y, z] = Array(3)
         .fill(1)
         .map(() => THREE.MathUtils.randFloatSpread(100));
