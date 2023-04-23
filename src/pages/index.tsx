@@ -35,28 +35,19 @@ export default function Home() {
         </h3>
         <div id="example">
           <div id="example1">
-            <Card style={{ height: "200px", padding: "10px" }}>
-              <GiWeightLiftingUp size={50} /> x 7 @ 85lbs = <h2>102</h2>
-              <h2 style={{ color: "black" }}>1RM = 102 lbs</h2>
-              <h3 style={{ color: "black" }}>
-                102 = 85 ÷ [(1.0278) - (0.0278 x 7)]
-              </h3>
-            </Card>
+            <GiWeightLiftingUp size={50} /> x 7 @ 85lbs = <h2>102</h2>
+            <h2>1RM = 102 lbs</h2>
+            <h3>102 = 85 ÷ [(1.0278) - (0.0278 x 7)]</h3>
+            <hr />
           </div>
           <div>
-            <br />
-            <br />
-            <h1>VS.</h1>
-            <br />
-            <br />
-            <br />
+            <h1 style={{ fontSize: "65" }}>VS.</h1>
           </div>
           <div id="example2">
-            <Card style={{ height: "200px", padding: "10px" }}>
-              <GiWeightLiftingUp size={50} /> x 1 @ 100bs = <h3>100</h3>
-              <h2 style={{ color: "black" }}>1RM = 100 lbs</h2>
-              <h3 style={{ color: "black" }}>100 = 100 x 1</h3>
-            </Card>
+            <hr />
+            <GiWeightLiftingUp size={50} /> x 1 @ 100bs = <h3>100</h3>
+            <h2>1RM = 100 lbs</h2>
+            <h3>100 = 100 x 1</h3>
           </div>
         </div>
         <p>Click one of the links above to test this yourself!</p>
