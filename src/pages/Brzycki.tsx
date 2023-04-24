@@ -114,7 +114,15 @@ export default function Brzycki() {
         )}{" "}
       </h1>
       <div style={{ display: "grid", placeItems: "center" }}>
-        <Button className="toggle-math-button" onClick={toggleMath}>
+        <Button
+          sx={{
+            color: "black",
+            backgroundColor: "slategrey",
+            borderColor: "grey",
+            ":hover": { backgroundColor: "silver" },
+          }}
+          onClick={toggleMath}
+        >
           {showMath ? "Hide Math" : "Show Math"}
         </Button>{" "}
       </div>
