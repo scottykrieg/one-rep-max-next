@@ -94,8 +94,17 @@ export default function ThreeScene() {
 
     document.body.onscroll = moveCamera;
 
-    // Clean up by removing the event listener and disposing of the renderer
+    function onWindowResize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+    }
+
+    window.addEventListener("resize", onWindowResize);
     return () => {
+      window.removeEventListener("resize", onWindowResize);
       renderer.dispose();
     };
   }, []);
