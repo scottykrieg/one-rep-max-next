@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Footer() {
   return (
     <>
-      <div className={styles.footerCard}>
-        <div className={inter.className}>
+      <div className={inter.className}>
+        <div className={styles.footerCard}>
           <h6>Created by Scotty Krieg, Using:</h6>
           <div className={styles.footerGrid}>
             <FaReact size={30} />
